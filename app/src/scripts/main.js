@@ -1,0 +1,1 @@
+document.write('javascript main 1 ')

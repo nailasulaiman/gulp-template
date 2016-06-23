@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------------------------------------------
+//	BASE
+//	Variables, Mixins, base
+//-----------------------------------------------------------------------------------------
+
+body {
+	background: #eee; 
+}
+
+main {
+	margin: 50px;
+	background-color: #FFF;
+}
+
+// Variables & Mixins
+// @import "global/variables";
+// @import "global/fonts";
+// @import "global/mixins";
+
+// // Base
+// @import "global/base";
+// @import "global/utilities";
+
+
+
+// //-----------------------------------------------------------------------------------------
+// //	GENERAL
+// //	Global Styles
+// //-----------------------------------------------------------------------------------------
+
+// @import "global/header";
+// @import "global/footer";
+
+// @import "global/sections"; 
+
+
+// //-----------------------------------------------------------------------------------------
+// //	MODULES
+// //	Specific module Styles
+// //-----------------------------------------------------------------------------------------
+
+// @import "modules/hotdog"; 
+// @import "modules/chicken"; 
+
+
+
+// //-----------------------------------------------------------------------------------------
+// //	TEMPORARY
+// //	Temporary styles for demo and debugging
+// //-----------------------------------------------------------------------------------------
+
+// //DEBUG LAYOUT OUTLINES
+// // * {
+// //   outline: 1px solid blue;
+// // }
+
+// #header, 
+// #section--hotdog {
+//  // display: none;
+// }
