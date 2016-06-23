@@ -1,5 +1,5 @@
 # gulp-template
-Template for gulp for watching scss, js, and html partial files, plus build task
+Template for gulp for watching scss, js, and html partial files, plus BrowserSync for live reload of files. Build task for generating final output.
 
 ## Installation
 Navigate to the gulp-template folder in the terminal and run `npm install`. This will install all the dependencies.
