@@ -46,10 +46,10 @@ gulp.task('sass', function () {
 
 // JAVASCRIPT
 //script paths
-var jsFiles = 'app/src/scripts/**/*.js',  
+var jsFiles = 'app/src/scripts/**/*.js',
     jsDest = 'app/js';
 
-gulp.task('scripts', function() {  
+gulp.task('scripts', function() {
     return gulp.src(jsFiles)
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest(jsDest))
@@ -110,7 +110,7 @@ gulp.task('browserSync', function() {
 
 // FILE INCLUDES
 gulp.task('fileinclude', function() {
-  gulp.src(['app/src/index.html'])
+  gulp.src(['app/src/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -121,14 +121,13 @@ gulp.task('fileinclude', function() {
         }));
 });
 
-
 // WATCH
 gulp.task('watch', ['sass', 'scripts','fileinclude', 'browserSync'], function (){
-  gulp.watch('app/src/scss/**/*.scss', ['sass']); 
-  gulp.watch('app/src/scripts/**/*.js', ['scripts']); 
-  gulp.watch('app/src/**/*.html', ['fileinclude']); 
-  //gulp.watch('app/*.html', browserSync.reload); 
-  //gulp.watch('app/js/**/*.js', browserSync.reload); 
+  gulp.watch('app/src/scss/**/*.scss', ['sass']);
+  gulp.watch('app/src/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/src/**/*.html', ['fileinclude']);
+  //gulp.watch('app/*.html', browserSync.reload);
+  //gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 //BUILD
@@ -138,7 +137,7 @@ gulp.task('build', [`clean`, `sass`, `useref`, `images`, `fonts`], function (){
 
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 
+  runSequence('clean:dist',
     ['sass', 'useref', 'images', 'fonts'],
     callback
   )
